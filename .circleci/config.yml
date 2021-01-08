@@ -15,8 +15,21 @@ jobs:
           path: /home/circleci/project/artifact.txt
           destination: artifactFile
 
+  second-circle-ci-job:
+    docker:
+      - image: circleci/openjdk:8u171-jdk
+    steps:
+      - checkout
+      - run:
+         command: |
+            curl -H "Circle-Token: " https://circleci.com/api/v1.1/project/github/rishikhuranasufi/$CIRCLE_PROJECT_REPONAME/latest/artifacts \
+               | grep -o 'https://[^"]*' \
+               | wget --verbose --header "Circle-Token: " --input-file -
+            cat artifact.txt  
+
 workflows:
   first-workflow:
     jobs:
       - first-circle-ci-job
+      - second-circle-ci-job
       
