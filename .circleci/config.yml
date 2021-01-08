@@ -37,6 +37,7 @@ jobs:
             echo Its my first CircleCI Job.
             echo Its Second job execution >> artifact.txt
             ls -la # Command to list all files in current directory including newly created
+            
       - store_artifacts:
           path: /home/circleci/project/artifact.txt
           destination: artifactFile
