@@ -10,10 +10,13 @@ jobs:
          command: |            
             # 1 Type of ENV : Environment variable for a single command shell             
             echo "Value for variable ENV_INSIDE_STEP is :: "$ENV_INSIDE_STEP
+            # 2 Type of ENV : Environment variable for whole JOB 
+            echo "Value for variable ENV_INSIDE_JOB is :: "$ENV_INSIDE_JOB
          environment:
            ENV_INSIDE_STEP: I am defined as env variable in run.
     environment:
        ENV_INSIDE_JOB: I am defined as env variable in JOB
+
   first-circle-ci-job:
     docker:
       - image: circleci/openjdk:8u171-jdk
