@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  first-circle-ci-job:
+    docker:
+      - image: circleci/openjdk:8u171-jdk
+    steps:
+      - checkout
+      - run:
+         command: |
+            echo Its my first CircleCI Job.
+
+workflows:
+  first-workflow:
+    jobs:
+      - first-circle-ci-job
+      
