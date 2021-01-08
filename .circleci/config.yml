@@ -58,4 +58,7 @@ workflows:
   workflow-to-demonstrate-environment:    
     jobs:
       - job-to-demonstrate-environment
+          context:
+            - my-context
+            - another-context
       
