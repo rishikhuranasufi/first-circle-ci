@@ -57,7 +57,7 @@ workflows:
       - second-circle-ci-job
   workflow-to-demonstrate-environment:    
     jobs:
-      - job-to-demonstrate-environment
+      - job-to-demonstrate-environment:
           context:
             - my-context
             - another-context
