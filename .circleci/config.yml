@@ -25,7 +25,7 @@ jobs:
             curl -H "Circle-Token: " https://circleci.com/api/v1.1/project/github/rishikhuranasufi/$CIRCLE_PROJECT_REPONAME/latest/artifacts \
                | grep -o 'https://[^"]*' \
                | wget --verbose --header "Circle-Token: " --input-file -
-            cat artifact.txt  
+            cat artifactFile  
 
 workflows:
   first-workflow:
