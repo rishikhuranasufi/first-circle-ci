@@ -12,6 +12,8 @@ jobs:
             echo "Value for variable ENV_INSIDE_STEP is :: "$ENV_INSIDE_STEP
             # 2 Type of ENV : Environment variable for whole JOB 
             echo "Value for variable ENV_INSIDE_JOB is :: "$ENV_INSIDE_JOB
+            # 3 Env Variable -- Special build variables
+            echo "CIRCLE_BRANCH NAME IS :: $CIRCLE_BRANCH"
          environment:
            ENV_INSIDE_STEP: I am defined as env variable in run.
     environment:
