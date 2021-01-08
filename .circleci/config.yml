@@ -18,7 +18,7 @@ jobs:
             echo "CIRCLE_BRANCH NAME IS :: $CIRCLE_BRANCH"
             
             # 4th Type of ENV : Environment variable from Context             
-            echo "Value for variable ENV_INSIDE_JOB is :: "$demoKey
+            echo "Value for context variable is :: "$demoKey
          environment:
            ENV_INSIDE_STEP: I am defined as env variable in run.
     environment:
