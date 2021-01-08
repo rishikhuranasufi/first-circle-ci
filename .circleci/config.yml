@@ -21,8 +21,7 @@ jobs:
             echo "Value for context variable is :: "$demoKey
             
             # 5th Type of ENV : Environment variable from Project             
-            echo "Value for Project env variable is :: "$demoKeyEnv
-                        
+            echo "Value for Project env variable is :: "$demoKeyEnv                        
          environment:
            ENV_INSIDE_STEP: I am defined as env variable in run.
     environment:
