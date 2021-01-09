@@ -60,7 +60,7 @@ workflows:
       - first-circle-ci-job
       - second-circle-ci-job:
            requires:
-              first-circle-ci-job
+              - first-circle-ci-job
             
   workflow-to-demonstrate-environment:    
     jobs:
