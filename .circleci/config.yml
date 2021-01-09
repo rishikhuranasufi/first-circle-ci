@@ -21,8 +21,7 @@ jobs:
             echo "Value for context variable is :: "$demoKey
             
             # 5th Type of ENV : Environment variable from Project             
-            echo "Value for Project env variable is :: "$demoKeyEnv
-            sleep 100
+            echo "Value for Project env variable is :: "$demoKeyEnv            
          environment:
            ENV_INSIDE_STEP: I am defined as env variable in run.
     environment:
@@ -60,9 +59,13 @@ workflows:
   first-workflow:
     jobs:
       - first-circle-ci-job
+      - waiting-for-approval:
+          type: approval 
+          requires:
+           - first-circle-ci-job
       - second-circle-ci-job:
            requires:
-              - first-circle-ci-job
+              - waiting-for-approval
             
   workflow-to-demonstrate-environment:    
     jobs:
