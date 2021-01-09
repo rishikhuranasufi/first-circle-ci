@@ -58,7 +58,10 @@ workflows:
   first-workflow:
     jobs:
       - first-circle-ci-job
-      - second-circle-ci-job
+      - second-circle-ci-job:
+           require:
+              first-circle-ci-job
+            
   workflow-to-demonstrate-environment:    
     jobs:
       - job-to-demonstrate-environment:
