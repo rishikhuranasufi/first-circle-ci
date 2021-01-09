@@ -49,18 +49,15 @@ jobs:
       - checkout
       - run:
          command: |
-            curl -H "Circle-Token:36569ede72602fb7d7f5971416bcc84f2ea328b3 " https://circleci.com/api/v1.1/project/github/rishikhuranasufi/$CIRCLE_PROJECT_REPONAME/latest/artifacts \
-               | grep -o 'https://[^"]*' \
-               | wget --verbose --header "Circle-Token:36569ede72602fb7d7f5971416bcc84f2ea328b3 " --input-file -
-            cat artifactFile  
+            echo Its my first CircleCI Job.
+            echo Its Second job execution >> artifact.txt
+            ls -la # Command to list all files in current directory including newly created
 
 workflows:
   first-workflow:
     jobs:
       - first-circle-ci-job
-      - second-circle-ci-job:
-           requires:
-              - first-circle-ci-job
+      - second-circle-ci-job
             
   workflow-to-demonstrate-environment:    
     jobs:
