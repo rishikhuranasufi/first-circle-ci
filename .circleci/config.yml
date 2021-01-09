@@ -51,7 +51,7 @@ jobs:
          command: |         
            curl -H "Circle-Token: $CIRCLE_TOKEN" https://circleci.com/api/v1.1/project/github/rishikhuranasufi/first-circle-ci/latest/artifacts \
            | grep -o 'https://[^"]*' \
-           | wget --verbose --header "Circle-Token: $CIRCLE_TOKEN" --input-file -
+           | wget --verbose --header "Circle-Token: $CIRCLE_TOKEN" --input-file -artifactFile
             #36569ede72602fb7d7f5971416bcc84f2ea328b3
             cat artifactFile  
 
