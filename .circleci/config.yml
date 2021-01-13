@@ -6,7 +6,7 @@ jobs:
       # Primary container image where all steps run.
       - image: circleci/openjdk:8u171-jdk
       # Secondary container image on common network. 
-      - image: mongo:2.6.8-jessie
+      - image: mongo:latest
     steps:
       - checkout
       - run:
