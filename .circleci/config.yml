@@ -2,19 +2,13 @@ version: 2.1
 
 jobs:
   first-circle-ci-job:
-    docker:
-      # Primary container image where all steps run.
-      - image: circleci/openjdk:8u171-jdk
-      # Secondary container image on common network. 
-      - image: circleci/mongo:latest
+    machine:
+      image: ubuntu-1604:202007-01
     steps:
       - checkout
       - run:
          command: |
             echo Its my first CircleCI Job.
-      # Below command will execute in openjdk container
-      # and can access mongo on localhost
-      - run: sleep 5 && nc -vz localhost 270119
 
 workflows:
   first-workflow:
