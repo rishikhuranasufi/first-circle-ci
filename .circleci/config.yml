@@ -14,7 +14,7 @@ jobs:
             echo Its my first CircleCI Job.
       # Below command will execute in openjdk container
       # and can access mongo on localhost
-      - run: sleep 5 && nc -vz localhost 27017
+      - run: sleep 5 && nc -vz localhost 270119
 
 workflows:
   first-workflow:
