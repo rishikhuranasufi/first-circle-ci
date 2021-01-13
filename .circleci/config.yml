@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
          command: |
-            echo Its my first CircleCI Job.
+            sudo apt update -y
 
 workflows:
   first-workflow:
