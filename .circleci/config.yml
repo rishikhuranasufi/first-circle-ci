@@ -1,12 +1,9 @@
 version: 2.1
 
-orbs:
-  win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
-
-
 jobs:
   first-circle-ci-job:
-    executor: win/default # executor type
+    machine:
+      image: ubuntu-1604:202007-01
     steps:
       - checkout
       - run:
