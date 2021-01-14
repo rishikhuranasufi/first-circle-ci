@@ -6,8 +6,7 @@ orbs:
 workflows:
   first-orb-workflow:
     jobs:
-      - hello-world/echo-job:
-           parameters:
+      - hello-world/echo-job:           
              to: "Test"
       
       
