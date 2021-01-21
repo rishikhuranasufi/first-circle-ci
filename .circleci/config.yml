@@ -66,11 +66,3 @@ workflows:
       - second-circle-ci-job:
            requires:
               - waiting-for-approval
-            
-  workflow-to-demonstrate-environment:    
-    jobs:
-      - job-to-demonstrate-environment:
-          context:
-            - my-context
-            - another-context
-      
